@@ -19,7 +19,7 @@ namespace Nlang
 		}
 		public void ExecuteFunction(string FunctionName,params KeyValuePair<string,Type>[] Args)
 		{
-
+			Functions.Find(x=>x.FunctionName==FunctionName)
 		}
 	}
 }

@@ -17,6 +17,7 @@ namespace Nlang
 				return functionName;
 			}
 		}
+		public Type ReturnType { private set; get; }
 		private string[] Lines;
 		public Dictionary<string, Type> Arguments;
 		public Function(string FunctionName)
@@ -33,6 +34,11 @@ namespace Nlang
 			functionName = FunctionName;
 			Lines = lines;
 			Arguments = arguments.ToDictionary(x=>x.Key,x=>x.Value);
+		}
+
+		public Variable Invoke(params KeyValuePair<string, Variable>[] arguments)
+		{
+
 		}
 	}
 }
